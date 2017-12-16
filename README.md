@@ -29,19 +29,28 @@ Take and image of the instance to reproduce in other VMs
 In Cloud Shell type:
 
 PROJECT="mmgr-geocoder-proyect"
+
 ZONE="us-central1-c"
+
 CLIENT_SNAPSHOT="cpufree-xmr"
+
 MTYPE="f1-micro"
+
 DISK_SIZE="2"
+
 NUM=10
 
 for i in `seq 1 $NUM`
+
 do
+
   INSTANCE="Ensayo_a-$i"
+  
   echo Creating $INSTANCE
   
   gcloud compute --project $PROJECT disks create ${INSTANCE} --size $DISK_SIZE --zone $ZONE --source-snapshot $CLIENT_SNAPSHOT --type "pd-standard"
   
   gcloud beta compute --project $PROJECT instances create $INSTANCE --zone $ZONE --machine-type $MTYPE --subnet "default" --metadata "startup-script=#! /bin/bash\u000acd gcloud-cpufree-mineXMR/bin\u000a./xmr-stak-cpu" --maintenance-policy "MIGRATE" --no-service-account --no-scopes --min-cpu-platform "Automatic" --disk "name=${INSTANCE}-boot" "device-name=${INSTANCE}-boot" "mode=rw" "boot=yes" "auto-delete=yes"
+  
 done
 
