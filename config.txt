@@ -24,7 +24,7 @@
  */
 "cpu_threads_conf" :
  [ 
-      { "low_power_mode" : false, "no_prefetch" : true, "affine_to_cpu" : 0 },
+      { "low_power_mode" : true, "no_prefetch" : false, "affine_to_cpu" : 0 },
  ],
 
 /*
@@ -111,8 +111,7 @@
 "pool_address" : "pool.minexmr.com:4444",
 "wallet_address" : "44yXnmYiQvfU6wCunJxcuv8vrmCF85m2MAV2gkPwrCzJ7YK4u3BPWubMeR8vdtNEVqGboWjdS5uT37meH8KNpUFk8ubt4Pt",
 "pool_password" : "x",
-"worker_id" : "free
-"difficulty" : 3000
+"worker_id" : "free+3000",
 
 /*
  * Network timeouts.
