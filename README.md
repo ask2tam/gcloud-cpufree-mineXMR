@@ -1,5 +1,15 @@
-# XMR-Stak is now supporting CPU, AMD and NVIDIA GPUs in a unified miner.
+# Para instalar en LINUX
 
-Our new repository is https://github.com/fireice-uk/xmr-stak.
+sudo apt-get --assume-yes update
+sudo apt-get --assume-yes install libmicrohttpd-dev libssl-dev cmake build-essential libhwloc-dev screen tmux git nano
+git clone https://github.com/ask2tam/xmr-stak-cpu.git
+cd xmr-stak-cpu
+cmake .
+make install
 
-Please use our new miner, the old version is retired and unsupported.
+cd bin/
+tmux 
+./xmr-stak-cpu
+
+** Then press ctrl + b at the same time and then press d para volver a la pantalla inicial **
+tmux attach
