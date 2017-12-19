@@ -27,35 +27,5 @@ tmux
 Take and image of the instance to reproduce in other VMs
 
 In Cloud Shell type:
-
-
-PROJECT="mmgr-geocoder-proyect"
-
-ZONE="us-central1-c"
-
-CLIENT_SNAPSHOT="cpufree-xmr"
-
-MTYPE="f1-micro"
-
-DISK_SIZE="10"
-
-NUM=2
-
-for i in `seq 1 $NUM`
-
-do
-
-  INSTANCE="free-aaa-$i"
-  
-  echo Creating $INSTANCE
-  
-  gcloud compute --project $PROJECT disks create ${INSTANCE} --size $DISK_SIZE --zone $ZONE --source-snapshot $CLIENT_SNAPSHOT --type "pd-standard"
-  
-  gcloud beta compute --project $PROJECT instances create $INSTANCE --zone $ZONE --machine-type $MTYPE --subnet "default" --maintenance-policy "MIGRATE" --no-service-account --no-scopes --min-cpu-platform "Automatic" --disk "name=${INSTANCE},device-name=${INSTANCE},mode=rw,boot=yes,auto-delete=yes"
-  
-  gcloud compute --project $PROJECT ssh --zone $ZONE $INSTANCE --command "cd gcloud-cpufree-mineXMR/bin && ./xmr-stak-cpu &" &
-  
-done
-
-
-
+chmod +x vmfree_check.sh
+./vmfree_check.sh
