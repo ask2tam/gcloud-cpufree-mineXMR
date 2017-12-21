@@ -10,7 +10,7 @@
 "tls_secure_algo" : true,
 "tls_fingerprint" : "",
 
-"pool_address" : "etn.easyhash.io:3630",
+"pool_address" : "pool.electroneum.space:3333",
 "wallet_address" : "etnkG3qzE3tJvVBfb4vidAgJRoupHQ7x33KoRb8Ms59ZJcYotBpJ6AD5YaoFRAuMC6Kktkfi5pLG1JiV4Lo3iTFR5tciHNnFYb",
 "pool_password" : "x",
 
