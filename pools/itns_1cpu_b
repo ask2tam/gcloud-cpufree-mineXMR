@@ -10,7 +10,7 @@
 "tls_secure_algo" : true,
 "tls_fingerprint" : "",
 
-"pool_address" : "45.32.171.89:6666",
+"pool_address" : "45.32.171.89:4444",
 "wallet_address" : "iz4nBhCrFdt5ka8MkFpSXwi9V8pCe8MvMCmjzQzg3o5WNQ1yq1t4sb522hhvgeMFZGZE61YrF7YCG5vfP3YpwYr5288n6JMv1",
 "pool_password" : "x",
 
