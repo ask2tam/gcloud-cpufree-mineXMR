@@ -14,6 +14,7 @@ cd gcloud-cryptomine
 cmake .
 make install
 cd ..
+chmod +x gcloud-cryptomine/start.sh
 
 sudo sysctl -w vm.nr_hugepages=128
 ulimit -l
