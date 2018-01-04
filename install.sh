@@ -19,3 +19,4 @@ sudo sysctl -w vm.nr_hugepages=128
 ulimit -l
 sudo sh -c 'echo "* soft memlock 262144" >> /etc/security/limits.conf'
 sudo sh -c 'echo "* hard memlock 262144" >> /etc/security/limits.conf'
+sudo reboot
